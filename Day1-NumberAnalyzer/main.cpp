@@ -18,7 +18,7 @@ void userInput(std::vector<int>& numberInput) {
 
 void display(const std::vector<int>& numberInput) {
   int sum{};
-  int average{};
+  double average{};
   int smallestNum{};
   int largestNum{};
   int evenCount{};
@@ -28,8 +28,6 @@ void display(const std::vector<int>& numberInput) {
   for (int num : numberInput) {
     std::cout << num << " ";
     sum += num;
-
-    average = sum / numberInput.size();
 
     if (num < smallestNum || smallestNum == 0) {
       smallestNum = num;
@@ -47,9 +45,12 @@ void display(const std::vector<int>& numberInput) {
     }
     
   }
+  average = static_cast<double>(sum) / numberInput.size();
   std::cout << std::endl;
   
-    
+ 
+
+
   std::cout << "\n!!Display Menu!!\n\n";
   std::cout << "Total Sum: " << sum << std::endl;
   std::cout << "Average: " << average << std::endl;
