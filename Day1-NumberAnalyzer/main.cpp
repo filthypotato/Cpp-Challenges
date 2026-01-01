@@ -36,14 +36,12 @@ void display(const std::vector<int>& numberInput) {
       largestNum = num;
     }
     
-    
     if (num % 2 == 0) {
        evenCount++;
     }
     else {
       oddCount++;
     }
-    
   }
   average = static_cast<double>(sum) / numberInput.size();
   std::cout << std::endl;
