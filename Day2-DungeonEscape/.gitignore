@@ -5,6 +5,7 @@ build/
 out/
 bin/
 dist/
+.cache/
 
 *.o
 *.obj

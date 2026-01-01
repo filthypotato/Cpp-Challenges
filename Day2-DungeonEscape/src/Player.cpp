@@ -9,9 +9,7 @@
 #include <algorithm> // For std::min, std::max
 
 // Constructor - Initialize player stats
-Player::Player() 
-    : health(100)
-    , maxHealth(100)
+Player::Player() : health(100), maxHealth(100)
     , attackPower(0)     // Will be set randomly each turn
     , defense(0)
     , potionCount(3)     // Start with 3 potions
@@ -31,13 +29,9 @@ Player::Player()
  * - Return the damage dealt
  */
 int Player::attack(Enemy& enemy) {
-    // TODO: Your code here
-    // Example structure:
-    // int damage = attackPower;
-    // enemy.takeDamage(damage);
-    // return damage;
-    
-    return 0; // FIXME: Return actual damage
+    int damage = attackPower;
+    enemy.takeDamage(damage);
+    return damage;
 }
 
 /**
@@ -45,7 +39,9 @@ int Player::attack(Enemy& enemy) {
  * HINT: Set the defending flag to true
  */
 void Player::defend() {
-    // TODO: Your code here
+    int defend = defense;
+    
+
     defending = true;
     std::cout << "You brace yourself for the enemy's attack...\n";
 }
@@ -71,7 +67,7 @@ bool Player::drinkPotion() {
     // TODO: Decrement potion count
     // TODO: Print success message
     
-    return false; // FIXME: Return true on success
+    return true; // Return true on success
 }
 
 /**
@@ -85,7 +81,7 @@ bool Player::attemptRun() {
     // TODO: Your code here
     // Use: rand() % 100 + 1 to get 1-100
     
-    return false; // FIXME: Return based on random chance
+    return rand(); // Return based on random chance
 }
 
 /**

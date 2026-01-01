@@ -4,11 +4,9 @@
 #include <cstdlib> // For rand()
 
 // Constructor
-Enemy::Enemy() 
-    : health(100)
-    , defense(0)
-    , attackPower(0)
+Enemy::Enemy() : health(100), defense(0), attackPower(0)
 {
+
 }
 
 // ACTION METHODS - TODO: Implement these
@@ -28,14 +26,16 @@ void Enemy::attack(Player& player, bool hardAttack) {
     
     if (hardAttack) {
         // TODO: Hard attack (10-25 damage)
+        damage = rand() % 16 + 10;
         std::cout << "Enemy strikes with a BRUTAL attack!\n";
     } else {
         // TODO: Normal attack (5-20 damage)
+        damage = rand() % 16 + 5;
         std::cout << "Enemy attacks!\n";
     }
     
     // TODO: Apply damage to player
-    // player.takeDamage(damage);
+    player.takeDamage(damage);
 }
 
 /**

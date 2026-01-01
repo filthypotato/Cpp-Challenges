@@ -115,7 +115,7 @@ int main() {
     const int MAX_TURNS = 10;
     bool gameOver = false;
     bool playerWon = false;
-    
+  
     // ============================================
     // MAIN GAME LOOP
     // TODO: Implement the main game loop
@@ -161,8 +161,9 @@ int main() {
         // HINT: Use a switch statement
         switch (choice) {
             case 1: // Attack
-                // TODO: Implement attack logic
-                cout << "\n[TODO: Implement attack]\n";
+                player.attack(enemy);
+                
+                std::cout << enemy.getHealth() << "\n";
                 break;
                 
             case 2: // Drink potion
